@@ -7,10 +7,6 @@ import (
     "unsafe"
 )
 
-const (
-    GENERIC_READ = 0x80000000
-)
-
 var (
     kernel32Handle syscall.Handle
     fileTimeToSystemTimePtr uintptr
