@@ -146,7 +146,7 @@ func GetFileTime(filename string) (FileTime, error) {
             int(createSysTime.Hour),
             int(createSysTime.Minute),
             int(createSysTime.Second),
-            int(createSysTime.Milliseconds) * 1000,
+            int(createSysTime.Milliseconds) * int(time.Millisecond),
             time.UTC),
         LastAccessTime: time.Date(
             int(accessSysTime.Year),
@@ -155,7 +155,7 @@ func GetFileTime(filename string) (FileTime, error) {
             int(accessSysTime.Hour),
             int(accessSysTime.Minute),
             int(accessSysTime.Second),
-            int(accessSysTime.Milliseconds) * 1000,
+            int(accessSysTime.Milliseconds) * int(time.Millisecond),
             time.UTC),
         LastWriteTime: time.Date(
             int(modifySysTime.Year),
@@ -164,7 +164,7 @@ func GetFileTime(filename string) (FileTime, error) {
             int(modifySysTime.Hour),
             int(modifySysTime.Minute),
             int(modifySysTime.Second),
-            int(modifySysTime.Milliseconds) * 1000,
+            int(modifySysTime.Milliseconds) * int(time.Millisecond),
             time.UTC),
     }, nil
 }
